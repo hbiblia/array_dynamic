@@ -16,5 +16,5 @@ Creamos un método para guardar datos en un array dinámico.
 Resultado
 
 Out: Hola Mundo                                                                                                                          
-Out: Jhonson Ozuna                                                                                                                       
+Out: Pokemon!!                                                                                                                       
 Out: Dragon Super 
