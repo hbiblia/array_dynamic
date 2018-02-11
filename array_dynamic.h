@@ -12,19 +12,15 @@ struct array{
 /* iniciamos un nuevo array */
 struct array *array_new(void)
 {
-    return (struct array*)malloc(sizeof(struct array)*2);
+    struct array *tmp = (struct array*)malloc(sizeof(struct array)*100);
+    tmp[0].length = 0;
+    return tmp;
 }
 
 /* creamos un nuevo valor */
 void array_append(struct array *a, void *data)
 {
-    if(a[0].length == 0){
-        a[0].data = data;
-    }else{
-        a[a[0].length].data = data;
-    }
-    
-    a[a[0].length+1].data = NULL;
+    a[ a[0].length ].data = data;
     a[0].length++;
 }
 
