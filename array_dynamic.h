@@ -12,7 +12,7 @@ struct array{
 /* iniciamos un nuevo array */
 struct array *array_new(void)
 {
-    struct array *tmp = (struct array*)malloc(sizeof(struct array)*100);
+    struct array *tmp = (struct array*)malloc(sizeof(struct array)+2);
     tmp[0].length = 0;
     return tmp;
 }
