@@ -3,7 +3,7 @@ Creamos un método para guardar datos en un array dinámico.
 
 
     struct array *tmp = array_new();
-    tmp = array_append(tmp, "Hola Mundo");
+    tmp = array_append(tmp, "Hola Mundo"); // espero eliminar esa salida pronto.
     tmp = array_append(tmp, "Pokemon!!");
     tmp = array_append(tmp, "Dragon Super");
     
