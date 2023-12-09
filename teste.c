@@ -6,20 +6,16 @@
 int main()
 {
     PtrArray *array = ad_array_new();
+    ad_array_append(array, "Hola Mundo");
+    ad_array_append(array, "Pokemon!!");
+    ad_array_append(array, "Dragon Super");
 
-    ad_array_append(array, "hola");
-    ad_array_append(array, "mundo");
-    ad_array_append(array, "cruel");
-    ad_array_append(array, "!");
-    ad_array_append(array, "aaaaah");
-
-    void* data = ad_array_remove(array, 4);
-
-    for (int i = 0; i < array->length; i++)
-    {
+    void* data = ad_array_remove(array, 2);
+    
+    for (int i = 0; i < array->length; i++) {
         printf("%s\n", (char*)ad_array_get(array, i));
     }
-
+    printf("Eliminado: %s\n", (char*)data);
     ad_array_free(array);
 
     return 0;
