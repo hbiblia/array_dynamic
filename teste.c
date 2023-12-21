@@ -11,6 +11,8 @@ int main()
     ad_array_append(array, "Dragon Super");
 
     void* data = ad_array_remove(array, 2);
+
+    ad_array_append(array, "Nuevo Pokemon");
     
     for (int i = 0; i < array->length; i++) {
         printf("%s\n", (char*)ad_array_get(array, i));

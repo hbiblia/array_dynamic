@@ -101,12 +101,8 @@ void* ad_array_remove(PtrArray* array, int index)
 {
     if (array == NULL || index < 0 || index >= array->length) return NULL;
     void* tmp = array->data[index];
-    for (int i = index; i < array->length - 1; i++)
-    {
-        array->data[i] = array->data[i + 1];
-    }
+    array->data[index] = array->data[array->length - 1];
     array->length--;
-    array->data = (void**)realloc(array->data, sizeof(void*) * array->length);
     return tmp;
 }
 
